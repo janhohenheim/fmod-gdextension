@@ -66,5 +66,5 @@ tasks.named("assemble").configure {
 
 dependencies {
     implementation(files("libraries/fmod.jar"))
-    implementation("org.godotengine:godot:4.5.0.stable")
+    implementation("org.godotengine:godot:4.7.1.stable")
 }
