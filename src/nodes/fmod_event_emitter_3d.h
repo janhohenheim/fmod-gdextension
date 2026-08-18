@@ -3,6 +3,7 @@
 
 #include "classes/node.hpp"
 #include "classes/node3d.hpp"
+#include "classes/ref.hpp"
 #include "fmod_event_emitter.h"
 
 namespace godot {

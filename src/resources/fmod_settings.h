@@ -3,6 +3,7 @@
 
 #include "fmod_studio.h"
 
+#include <classes/ref.hpp>
 #include <classes/resource.hpp>
 
 namespace godot {

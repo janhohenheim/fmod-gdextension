@@ -2,6 +2,7 @@
 #define GODOTFMOD_FMOD_BANK_LOADER_H
 
 #include "classes/node.hpp"
+#include "classes/ref.hpp"
 #include "studio/fmod_bank.h"
 
 namespace godot {

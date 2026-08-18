@@ -3,6 +3,7 @@
 
 #include "classes/canvas_item.hpp"
 #include "classes/node3d.hpp"
+#include "classes/ref.hpp"
 #include "fmod_common.h"
 #include "variant/utility_functions.hpp"
 

@@ -5,6 +5,7 @@
 #include "studio/fmod_event.h"
 
 #include <classes/node2d.hpp>
+#include <classes/ref.hpp>
 
 namespace godot {
     class FmodEventEmitter2D : public FmodEventEmitter<FmodEventEmitter2D, Node2D>  {

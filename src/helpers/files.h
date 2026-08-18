@@ -2,6 +2,7 @@
 #define GODOTFMOD_FILES_H
 
 #include <classes/dir_access.hpp>
+#include <classes/ref.hpp>
 #include <variant/packed_string_array.hpp>
 
 namespace godot {

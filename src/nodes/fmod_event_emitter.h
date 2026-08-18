@@ -9,6 +9,7 @@
 
 #include <classes/engine.hpp>
 #include <classes/project_settings.hpp>
+#include <classes/ref.hpp>
 
 static constexpr const char* BEAT_SIGNAL_STRING = "timeline_beat";
 static constexpr const char* MARKER_SIGNAL_STRING = "timeline_marker";
