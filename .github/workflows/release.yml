@@ -161,6 +161,8 @@ jobs:
 
   package-godot-addon:
     needs: [build]
+    permissions:
+      contents: write
     strategy:
       matrix:
         include:
