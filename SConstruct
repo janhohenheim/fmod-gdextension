@@ -9,7 +9,7 @@ target_path = ARGUMENTS.pop("target_path", "demo/addons/fmod/libs/")
 target_name = ARGUMENTS.pop("target_name", "libGodotFmod")
 fmod_lib_dir = ARGUMENTS.pop("fmod_lib_dir", "../libs/fmod/")
 
-env = SConscript("godot-cpp/SConstruct")
+env = SConscript("godot-cpp/SConstruct", {"api_version": "4.7"})
 
 # Add those directory manually, so we can skip the godot_cpp directory when including headers in C++ files
 source_path = [
