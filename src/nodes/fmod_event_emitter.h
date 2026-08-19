@@ -10,6 +10,7 @@
 #include <classes/engine.hpp>
 #include <classes/project_settings.hpp>
 #include <classes/ref.hpp>
+#include <cstdint>
 
 static constexpr const char* BEAT_SIGNAL_STRING = "timeline_beat";
 static constexpr const char* MARKER_SIGNAL_STRING = "timeline_marker";
@@ -77,6 +78,9 @@ namespace godot {
         bool is_preload_event() const;
         void set_volume(float volume);
         float get_volume() const;
+        int64_t get_native_event() const {
+            return _event.is_valid() ? reinterpret_cast<int64_t>(_event->get_wrapped()) : 0;
+        }
 
         void set_programmer_callback(const String& p_programmers_callback_sound_key);
 
@@ -876,6 +880,7 @@ namespace godot {
         ClassDB::bind_method(D_METHOD("set_volume", "p_volume"), &Derived::set_volume);
         ClassDB::bind_method(D_METHOD("set_programmer_callback", "p_programmers_callback_sound_key"), &Derived::set_programmer_callback);
         ClassDB::bind_method(D_METHOD("_emit_callbacks", "dict", "type"), &Derived::_emit_callbacks);
+        ClassDB::bind_method(D_METHOD("get_native_event"), &Derived::get_native_event);
 
 #ifdef TOOLS_ENABLED
         ClassDB::bind_method(D_METHOD("tool_remove_all_parameters"), &Derived::tool_remove_all_parameters);
