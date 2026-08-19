@@ -51,6 +51,7 @@ void FmodServer::_bind_methods() {
     ClassDB::bind_method(D_METHOD("get_all_buses"), &FmodServer::get_all_buses);
     ClassDB::bind_method(D_METHOD("get_all_event_descriptions"), &FmodServer::get_all_event_descriptions);
     ClassDB::bind_method(D_METHOD("get_all_banks"), &FmodServer::get_all_banks);
+    ClassDB::bind_method(D_METHOD("get_native_system"), &FmodServer::get_native_system);
 
     // DEBUGGING
     ClassDB::bind_method(D_METHOD("get_available_drivers"), &FmodServer::get_available_drivers);
@@ -668,6 +669,10 @@ Array FmodServer::get_all_banks() {
         array.append(Ref<FmodBank>(entry.value));
     }
     return array;
+}
+
+int64_t FmodServer::get_native_system() const {
+    return reinterpret_cast<int64_t>(system);
 }
 
 Ref<FmodEvent> FmodServer::create_event_instance_with_guid(const String& guid) {

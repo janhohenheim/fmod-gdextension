@@ -162,6 +162,7 @@ namespace godot {
         Array get_all_buses();
         Array get_all_event_descriptions();
         Array get_all_banks();
+        int64_t get_native_system() const;
 
         // DEBUGGING
         Array get_available_drivers();
